@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the online_teaching_guides feature.
+ */
+
+include_once 'online_teaching_guides.features.inc';

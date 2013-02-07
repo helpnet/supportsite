@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the tech_job_aids feature.
+ */
+
+include_once 'tech_job_aids.features.inc';

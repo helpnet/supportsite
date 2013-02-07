@@ -1,0 +1,25 @@
+.field-name-field-steps img {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #8F8F8F;
+}
+
+.help-doc-tip {
+  border: 1px solid green;
+  font-size: 0.9em;
+  padding: 3px;
+  background: #BBEBBB;
+  width: 80%;
+  margin: 20px auto;
+  border-radius: 2px;
+}
+
+.help-doc-important {
+  border: 1px solid red;
+  padding: 3px;
+  font-size: 0.9em;
+  background: #EBD9D9;
+  width: 80%;
+  margin: 20px auto;
+  border-radius: 2px;
+}

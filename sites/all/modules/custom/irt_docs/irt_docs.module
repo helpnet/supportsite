@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the irt docs feature.
+ */
+
+include_once 'irt_docs.features.inc';
