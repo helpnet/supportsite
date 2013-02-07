@@ -10,7 +10,7 @@
 function help_docs_taxonomy_default_vocabularies() {
   return array(
     'teaching_online' => array(
-      'name' => 'Teaching Online',
+      'name' => 'Online Teaching Guides',
       'machine_name' => 'teaching_online',
       'description' => 'Guides that help conceptualize teaching online',
       'hierarchy' => '0',
