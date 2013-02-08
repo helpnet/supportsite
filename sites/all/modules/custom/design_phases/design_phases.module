@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the design_phases feature.
+ */
+
+include_once 'design_phases.features.inc';
