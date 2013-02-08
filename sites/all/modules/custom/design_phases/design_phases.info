@@ -16,6 +16,7 @@ features[ctools][] = views:views_default:3.0
 features[features_api][] = api:1
 features[field][] = node-design_phase_description-body
 features[field][] = node-design_phase_description-field_design_phase
+features[field][] = node-design_phase_description-field_overview
 features[node][] = design_phase_description
 features[page_manager_pages][] = instructional_design_model_page
 features[taxonomy][] = design
