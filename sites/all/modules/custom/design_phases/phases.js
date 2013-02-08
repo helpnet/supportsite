@@ -4,7 +4,7 @@
 
       var menuLinks;
 
-      $('.node-design-phase-description').hide();
+      $('#design-model-page .node-design-phase-description').hide();
 
       menuLinks = $('.pane-menu-menu-design-model-test-menu li.leaf a');
 
@@ -16,7 +16,7 @@
 
         $(value).click( function() {
 
-          $('.node-design-phase-description').hide();
+          $('#design-model-page .node-design-phase-description').hide();
 
           $(nodeDiv).fadeIn('fast'); 
 
