@@ -74,7 +74,7 @@ function tech_job_aids_views_default_views() {
   $handler->display->display_options['fields']['field_description']['field'] = 'field_description';
   $handler->display->display_options['fields']['field_description']['label'] = '';
   $handler->display->display_options['fields']['field_description']['element_label_colon'] = FALSE;
-  /* Field: Content: Job Aid Tags */
+  /* Field: Content: Job Aid Tag */
   $handler->display->display_options['fields']['field_job_aid_tags']['id'] = 'field_job_aid_tags';
   $handler->display->display_options['fields']['field_job_aid_tags']['table'] = 'field_data_field_job_aid_tags';
   $handler->display->display_options['fields']['field_job_aid_tags']['field'] = 'field_job_aid_tags';
@@ -133,7 +133,7 @@ function tech_job_aids_views_default_views() {
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  $handler->display->display_options['path'] = 'technical-job-aids';
+  $handler->display->display_options['path'] = 'technical-job-aids-old';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Technical Job Aids';
   $handler->display->display_options['menu']['name'] = 'main-menu';
@@ -170,6 +170,7 @@ function tech_job_aids_views_default_views() {
   $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['tid']['break_phrase'] = TRUE;
   /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';

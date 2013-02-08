@@ -15,7 +15,7 @@ function tech_job_aids_categories_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Technical Job Aids';
   $page->admin_description = 'Panel for the Technical Job Aids page';
-  $page->path = 'technical-job-aids-new';
+  $page->path = 'technical-job-aids';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();

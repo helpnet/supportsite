@@ -81,7 +81,7 @@ function help_docs_field_default_fields() {
   $fields['node-help_doc-field_job_aid_tags'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '-1',
+      'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_job_aid_tags',
@@ -132,7 +132,7 @@ function help_docs_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_job_aid_tags',
-      'label' => 'Job Aid Tags',
+      'label' => 'Job Aid Tag',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -300,7 +300,7 @@ function help_docs_field_default_fields() {
   // Included for use with string extractors like potx.
   t('Describe what this job aid helps with.');
   t('Description');
-  t('Job Aid Tags');
+  t('Job Aid Tag');
   t('Related to Teaching Online');
   t('Steps');
   t('Tag this document with related pedagogical areas');
