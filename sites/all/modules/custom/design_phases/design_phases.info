@@ -20,3 +20,4 @@ features[node][] = design_phase_description
 features[page_manager_pages][] = instructional_design_model_page
 features[taxonomy][] = design
 features[views_view][] = design_phases
+scripts[] = phases.js
