@@ -6,7 +6,7 @@
 
       $('#design-model-page .node-design-phase-description').hide();
 
-      menuLinks = $('.pane-menu-menu-design-model-test-menu li.leaf a');
+      menuLinks = $('#design-model-page .pane-main-menu li.leaf a');
 
       $.each(menuLinks, function(key, value) {
 
