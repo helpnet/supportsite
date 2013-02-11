@@ -10,12 +10,12 @@
 function design_phases_taxonomy_default_vocabularies() {
   return array(
     'course_design_guides' => array(
-      'name' => 'Course Design Guides',
+      'name' => 'Design Documents',
       'machine_name' => 'course_design_guides',
       'description' => '',
-      'hierarchy' => '1',
+      'hierarchy' => '0',
       'module' => 'taxonomy',
-      'weight' => '0',
+      'weight' => '-8',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',

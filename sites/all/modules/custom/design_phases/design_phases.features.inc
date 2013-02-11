@@ -27,7 +27,7 @@ function design_phases_views_api() {
 function design_phases_node_info() {
   $items = array(
     'design_phase_description' => array(
-      'name' => t('Design Phase Description'),
+      'name' => t('Design Document'),
       'base' => 'node_content',
       'description' => t('These are the detail pages for each design phase'),
       'has_title' => '1',

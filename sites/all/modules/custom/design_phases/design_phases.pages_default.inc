@@ -177,7 +177,7 @@ function design_phases_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Instructional Design Model Page';
   $page->admin_description = 'Panal page for the instructional design model overview';
-  $page->path = 'instructional-design-model';
+  $page->path = 'instructional-design-process';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();

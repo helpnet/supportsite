@@ -15,7 +15,7 @@ function help_docs_taxonomy_default_vocabularies() {
       'description' => 'Guides that help conceptualize teaching online',
       'hierarchy' => '0',
       'module' => 'taxonomy',
-      'weight' => '0',
+      'weight' => '-9',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -38,7 +38,7 @@ function help_docs_taxonomy_default_vocabularies() {
       'description' => 'Help documents that provide a step-by-step instructions for technical things',
       'hierarchy' => '1',
       'module' => 'taxonomy',
-      'weight' => '0',
+      'weight' => '-10',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
