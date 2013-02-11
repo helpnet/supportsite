@@ -9,9 +9,9 @@
  */
 function design_phases_taxonomy_default_vocabularies() {
   return array(
-    'design' => array(
-      'name' => 'Design',
-      'machine_name' => 'design',
+    'course_design_guides' => array(
+      'name' => 'Course Design Guides',
+      'machine_name' => 'course_design_guides',
       'description' => '',
       'hierarchy' => '1',
       'module' => 'taxonomy',

@@ -31,6 +31,13 @@ function online_teaching_guides_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_teaching_online_tag',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -47,6 +54,16 @@ function online_teaching_guides_views_default_views() {
   $handler->display->display_options['fields']['field_guide_intro']['field'] = 'field_guide_intro';
   $handler->display->display_options['fields']['field_guide_intro']['label'] = '';
   $handler->display->display_options['fields']['field_guide_intro']['element_label_colon'] = FALSE;
+  /* Field: Content: Teaching Online Tag */
+  $handler->display->display_options['fields']['field_teaching_online_tag']['id'] = 'field_teaching_online_tag';
+  $handler->display->display_options['fields']['field_teaching_online_tag']['table'] = 'field_data_field_teaching_online_tag';
+  $handler->display->display_options['fields']['field_teaching_online_tag']['field'] = 'field_teaching_online_tag';
+  $handler->display->display_options['fields']['field_teaching_online_tag']['label'] = '';
+  $handler->display->display_options['fields']['field_teaching_online_tag']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_teaching_online_tag']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_teaching_online_tag']['alter']['text'] = '<h2>[field_teaching_online_tag]</h2>';
+  $handler->display->display_options['fields']['field_teaching_online_tag']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_teaching_online_tag']['type'] = 'taxonomy_term_reference_plain';
   /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';

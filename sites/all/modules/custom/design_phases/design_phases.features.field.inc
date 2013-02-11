@@ -80,14 +80,14 @@ function design_phases_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-design_phase_description-field_design_phase'.
-  $fields['node-design_phase_description-field_design_phase'] = array(
+  // Exported field: 'node-design_phase_description-field_design_phase_tag'.
+  $fields['node-design_phase_description-field_design_phase_tag'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_design_phase',
+      'field_name' => 'field_design_phase_tag',
       'foreign keys' => array(
         'tid' => array(
           'columns' => array(
@@ -106,7 +106,7 @@ function design_phases_field_default_fields() {
       'settings' => array(
         'allowed_values' => array(
           0 => array(
-            'vocabulary' => 'design',
+            'vocabulary' => 'course_design_guides',
             'parent' => '0',
           ),
         ),
@@ -118,24 +118,25 @@ function design_phases_field_default_fields() {
       'bundle' => 'design_phase_description',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'Design tag',
+      'description' => 'Tag this page with the corresponding design phase.',
       'display' => array(
         'default' => array(
           'label' => 'above',
+          'module' => 'taxonomy',
           'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '1',
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => 3,
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '0',
+          'weight' => 0,
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_design_phase',
-      'label' => 'Design Phase',
+      'field_name' => 'field_design_phase_tag',
+      'label' => 'Design Phase Tag',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -145,7 +146,7 @@ function design_phases_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '4',
+        'weight' => '11',
       ),
     ),
   );
@@ -220,9 +221,9 @@ function design_phases_field_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
-  t('Design Phase');
-  t('Design tag');
+  t('Design Phase Tag');
   t('Overview');
+  t('Tag this page with the corresponding design phase.');
 
   return $fields;
 }
