@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the course_design feature.
+ */
+
+include_once 'course_design.features.inc';
