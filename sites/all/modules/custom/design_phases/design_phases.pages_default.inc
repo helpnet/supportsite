@@ -85,7 +85,7 @@ function design_phases_default_page_manager_handlers() {
     ),
   );
   $display->cache = array();
-  $display->title = '';
+  $display->title = '<none>';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -202,7 +202,7 @@ function design_phases_default_page_manager_handlers() {
     $pane->configuration = array(
       'links' => 1,
       'no_extras' => 1,
-      'override_title' => 1,
+      'override_title' => 0,
       'override_title_text' => '',
       'identifier' => '',
       'link' => 1,
