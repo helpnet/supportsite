@@ -13,7 +13,7 @@ function design_phases_taxonomy_default_vocabularies() {
       'name' => 'Design Documents',
       'machine_name' => 'course_design_guides',
       'description' => '',
-      'hierarchy' => '0',
+      'hierarchy' => '1',
       'module' => 'taxonomy',
       'weight' => '-8',
       'rdf_mapping' => array(

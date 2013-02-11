@@ -27,7 +27,16 @@ function design_phases_default_page_manager_handlers() {
     'css_id' => '',
     'css' => '',
     'contexts' => array(),
-    'relationships' => array(),
+    'relationships' => array(
+      0 => array(
+        'identifier' => 'Taxonomy term from Node (on Node: Design Phase Tag [field_design_phase_tag])',
+        'keyword' => 'taxonomy_term',
+        'name' => 'entity_from_field:field_design_phase_tag-node-taxonomy_term',
+        'delta' => 0,
+        'context' => 'argument_entity_id:node_1',
+        'id' => 1,
+      ),
+    ),
     'access' => array(
       'plugins' => array(
         0 => array(
@@ -38,6 +47,22 @@ function design_phases_default_page_manager_handlers() {
             ),
           ),
           'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'term_has_parent',
+          'settings' => array(
+            'vid' => '6',
+            'vid_2' => array(),
+            'vid_3' => array(),
+            'vid_6' => array(
+              42 => '42',
+            ),
+            'vid_4' => array(),
+            'vid_5' => array(),
+            'include_self' => 0,
+          ),
+          'context' => 'relationship_entity_from_field:field_design_phase_tag-node-taxonomy_term_1',
           'not' => FALSE,
         ),
       ),
@@ -194,7 +219,7 @@ function design_phases_default_page_manager_pages() {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'title' => 'Design Process Variant',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
