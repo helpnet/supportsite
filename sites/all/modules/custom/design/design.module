@@ -12,7 +12,7 @@ function design_node_presave($node) {
 
     $job_aids_output = "";
 
-    if (isset($node->field_related_job_aids[0])) {
+    if (isset($node->field_related_job_aids['und'][0])) {
 
       foreach ($node->field_related_job_aids['und'] as $key => $term) {
         if ($key == 0) {
@@ -27,7 +27,7 @@ function design_node_presave($node) {
 
     $online_teaching_docs_output = "";
 
-    if (isset($node->field_related_teaching_online[0])) {
+    if (isset($node->field_related_teaching_online['und'][0])) {
 
       foreach ($node->field_related_teaching_online['und'][0] as $key => $term) {
         if ($key == 0) {
