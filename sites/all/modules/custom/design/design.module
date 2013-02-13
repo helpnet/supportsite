@@ -12,27 +12,33 @@ function design_node_presave($node) {
 
     $job_aids_output = "";
 
-    foreach ($node->field_related_job_aids['und'] as $key => $term) {
-      if ($key == 0) {
-        $job_aids_output .= $term['tid'];
-      } else {
-        $job_aids_output .= "+" . $term['tid'];
-      }
-    }
+    if (isset($node->field_related_job_aids[0])) {
 
-    $node->field_related_job_aids_view['und'][0]['vargs'] = $job_aids_output;
+      foreach ($node->field_related_job_aids['und'] as $key => $term) {
+        if ($key == 0) {
+          $job_aids_output .= $term['tid'];
+        } else {
+          $job_aids_output .= "+" . $term['tid'];
+        }
+      }
+
+      $node->field_related_job_aids_view['und'][0]['vargs'] = $job_aids_output;
+    }
 
     $online_teaching_docs_output = "";
 
-    foreach ($node->field_related_teaching_online['und'][0] as $key => $term) {
-      if ($key == 0) {
-        $online_teaching_docs_output .= $term['tid'];
-      } else {
-        $online_teaching_docs_output .= "+" . $term['tid'];
-      }
-    }
+    if (isset($node->field_related_teaching_online[0])) {
 
-    $node->field_related_teaching_online_vi['und'][0]['vargs'] = $online_teaching_docs_output;
+      foreach ($node->field_related_teaching_online['und'][0] as $key => $term) {
+        if ($key == 0) {
+          $online_teaching_docs_output .= $term['tid'];
+        } else {
+          $online_teaching_docs_output .= "+" . $term['tid'];
+        }
+      }
+
+      $node->field_related_teaching_online_vi['und'][0]['vargs'] = $online_teaching_docs_output;
+    }
 
 
   }
