@@ -10,10 +10,10 @@
 function design_phases_taxonomy_default_vocabularies() {
   return array(
     'course_design_guides' => array(
-      'name' => 'Design Documents',
+      'name' => 'Design',
       'machine_name' => 'course_design_guides',
       'description' => '',
-      'hierarchy' => '1',
+      'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '-8',
       'rdf_mapping' => array(

@@ -521,7 +521,7 @@ function design_field_default_fields() {
           'module' => 'viewfield',
           'settings' => array(),
           'type' => 'viewfield_default',
-          'weight' => 5,
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -566,6 +566,148 @@ function design_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-design_phase_task-field_related_teaching_online'.
+  $fields['node-design_phase_task-field_related_teaching_online'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_related_teaching_online',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'teaching_online',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'design_phase_task',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '6',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_related_teaching_online',
+      'label' => 'Related to Teaching Online',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '9',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-design_phase_task-field_related_teaching_online_vi'.
+  $fields['node-design_phase_task-field_related_teaching_online_vi'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_related_teaching_online_vi',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'viewfield',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'viewfield',
+    ),
+    'field_instance' => array(
+      'bundle' => 'design_phase_task',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'viewfield',
+          'settings' => array(),
+          'type' => 'viewfield_default',
+          'weight' => '7',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_related_teaching_online_vi',
+      'label' => 'Related Teaching Online View',
+      'required' => 0,
+      'settings' => array(
+        'allowed_views' => array(
+          'design_documents' => 0,
+          'design_phase_components' => 0,
+          'design_phase_related_nodes' => 0,
+          'design_phase_tasks' => 0,
+          'design_phases' => 0,
+          'feeds_log' => 0,
+          'flag_bookmarks' => 0,
+          'flag_bookmarks_tab' => 0,
+          'irt_help_docs' => 0,
+          'online_teaching_guides' => 'online_teaching_guides',
+          'technical_job_aids' => 0,
+          'technical_job_aids_categories' => 0,
+          'workbench_current_user' => 0,
+          'workbench_edited' => 0,
+          'workbench_moderation' => 0,
+          'workbench_recent_content' => 0,
+        ),
+        'force_default' => 0,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'viewfield',
+        'settings' => array(),
+        'type' => 'viewfield_select',
+        'weight' => '10',
+      ),
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Component Design Phase');
@@ -574,6 +716,8 @@ function design_field_default_fields() {
   t('Overview');
   t('Related Job Aids');
   t('Related Job Aids View');
+  t('Related Teaching Online View');
+  t('Related to Teaching Online');
 
   return $fields;
 }
