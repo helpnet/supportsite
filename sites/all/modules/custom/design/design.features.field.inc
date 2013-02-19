@@ -132,7 +132,7 @@ function design_field_default_fields() {
       'label' => 'Overview',
       'required' => 0,
       'settings' => array(
-        'text_processing' => '0',
+        'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -282,7 +282,7 @@ function design_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '4',
+        'weight' => '3',
       ),
     ),
   );
@@ -339,7 +339,7 @@ function design_field_default_fields() {
       'label' => 'Design Phase Task Overview',
       'required' => 0,
       'settings' => array(
-        'text_processing' => '0',
+        'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -419,7 +419,7 @@ function design_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '6',
+        'weight' => '8',
       ),
     ),
   );
@@ -489,7 +489,7 @@ function design_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '5',
+        'weight' => '4',
       ),
     ),
   );
@@ -512,7 +512,12 @@ function design_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'design_phase_task',
-      'default_value' => NULL,
+      'default_value' => array(
+        0 => array(
+          'vname' => 'technical_job_aids|block_1',
+          'vargs' => '',
+        ),
+      ),
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -536,14 +541,10 @@ function design_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'allowed_views' => array(
-          'design_documents' => 0,
           'design_phase_components' => 0,
-          'design_phase_related_nodes' => 0,
           'design_phase_tasks' => 0,
           'design_phases' => 0,
           'feeds_log' => 0,
-          'flag_bookmarks' => 0,
-          'flag_bookmarks_tab' => 0,
           'irt_help_docs' => 0,
           'online_teaching_guides' => 0,
           'technical_job_aids' => 'technical_job_aids',
@@ -561,7 +562,7 @@ function design_field_default_fields() {
         'module' => 'viewfield',
         'settings' => array(),
         'type' => 'viewfield_select',
-        'weight' => '7',
+        'weight' => '5',
       ),
     ),
   );
@@ -631,7 +632,7 @@ function design_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '9',
+        'weight' => '6',
       ),
     ),
   );
@@ -654,7 +655,12 @@ function design_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'design_phase_task',
-      'default_value' => NULL,
+      'default_value' => array(
+        0 => array(
+          'vname' => 'online_teaching_guides|block_1',
+          'vargs' => '',
+        ),
+      ),
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -678,14 +684,10 @@ function design_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'allowed_views' => array(
-          'design_documents' => 0,
           'design_phase_components' => 0,
-          'design_phase_related_nodes' => 0,
           'design_phase_tasks' => 0,
           'design_phases' => 0,
           'feeds_log' => 0,
-          'flag_bookmarks' => 0,
-          'flag_bookmarks_tab' => 0,
           'irt_help_docs' => 0,
           'online_teaching_guides' => 'online_teaching_guides',
           'technical_job_aids' => 0,
@@ -703,7 +705,7 @@ function design_field_default_fields() {
         'module' => 'viewfield',
         'settings' => array(),
         'type' => 'viewfield_select',
-        'weight' => '10',
+        'weight' => '7',
       ),
     ),
   );
