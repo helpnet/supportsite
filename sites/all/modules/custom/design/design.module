@@ -6,11 +6,21 @@
 
 include_once 'design.features.inc';
 
+/**
+ * Implements hook_node_presave().
+ * 
+ * Adds logic to include view field if there are related nodes.
+ * Also dynamically adds appropriate contextual filter arguments based
+ * on selected tids.
+ */
+
 function design_node_presave($node) {
 
   if (($node->type == "design_phase_task") && isset($node->field_related_job_aids_view)) {
 
     $job_aids_output = "";
+
+    // If the node has related technical job aid terms, add Arguments.
 
     if (isset($node->field_related_job_aids['und'][0])) {
 
@@ -26,10 +36,13 @@ function design_node_presave($node) {
 
       $node->field_related_job_aids_view['und'][0]['vname'] = "technical_job_aids|block_1";
     } else {
+      // Otherwise, don't even add a view
       $node->field_related_job_aids_view = "";
     }
 
     $online_teaching_docs_output = "";
+
+    // If the node has related online teaching terms, add Arguments.
 
     if (isset($node->field_related_teaching_online['und'][0])) {
 
@@ -46,6 +59,7 @@ function design_node_presave($node) {
       $node->field_related_teaching_online_vi['und'][0]['vname'] = "online_teaching_guides|block_1";
 
     } else {
+      // Otherwise, don't even add a view
       $node->field_related_teaching_online_vi = "";
     }
 
