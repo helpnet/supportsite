@@ -23,6 +23,10 @@ function design_node_presave($node) {
       }
 
       $node->field_related_job_aids_view['und'][0]['vargs'] = $job_aids_output;
+
+      $node->field_related_job_aids_view['und'][0]['vname'] = "technical_job_aids|block_1";
+    } else {
+      $node->field_related_job_aids_view = "";
     }
 
     $online_teaching_docs_output = "";
@@ -38,8 +42,12 @@ function design_node_presave($node) {
       }
 
       $node->field_related_teaching_online_vi['und'][0]['vargs'] = $online_teaching_docs_output;
-    }
 
+      $node->field_related_teaching_online_vi['und'][0]['vname'] = "online_teaching_guides|block_1";
+
+    } else {
+      $node->field_related_teaching_online_vi = "";
+    }
 
   }
 }
