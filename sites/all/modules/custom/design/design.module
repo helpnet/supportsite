@@ -74,7 +74,7 @@ function design_node_presave($node) {
 
 function design_form_alter(&$form, &$form_state, $form_id) {
 
-  if ($form['type']['#value'] != "design_phase_task") {
+  if ((isset($form['type'])) && $form['type']['#value'] != "design_phase_task") {
     return;
   }
 
