@@ -537,7 +537,7 @@ function design_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_related_job_aids_view',
-      'label' => 'Related Job Aids View',
+      'label' => 'Related Technical Job Aids',
       'required' => 0,
       'settings' => array(
         'allowed_views' => array(
@@ -680,7 +680,7 @@ function design_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_related_teaching_online_vi',
-      'label' => 'Related Teaching Online View',
+      'label' => 'Related Teaching Online Guides',
       'required' => 0,
       'settings' => array(
         'allowed_views' => array(
@@ -717,8 +717,8 @@ function design_field_default_fields() {
   t('Design Phase Task Weight');
   t('Overview');
   t('Related Job Aids');
-  t('Related Job Aids View');
-  t('Related Teaching Online View');
+  t('Related Teaching Online Guides');
+  t('Related Technical Job Aids');
   t('Related to Teaching Online');
 
   return $fields;
