@@ -66,4 +66,21 @@ function design_node_presave($node) {
   }
 }
 
+/**
+ * Implements hook_form_alter().
+ * 
+ * Hides views field on the form
+ */
+
+function design_form_alter(&$form, &$form_state, $form_id) {
+
+  if ($form['type']['#value'] != "design_phase_task") {
+    return;
+  }
+
+  $form['field_related_job_aids_view']['#attributes']['class'][] = 'hidden-form-element';
+  $form['field_related_teaching_online_vi']['#attributes']['class'][] = 'hidden-form-element';
+
+}
+
 
