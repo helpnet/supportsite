@@ -26,5 +26,6 @@ features[page_manager_pages][] = instructional_design_model_page
 features[taxonomy][] = course_design_guides
 features[taxonomy][] = design
 features[views_view][] = design_phase_related_nodes
+features[views_view][] = design_phase_tasks
 features[views_view][] = design_phases
 scripts[] = phases.js

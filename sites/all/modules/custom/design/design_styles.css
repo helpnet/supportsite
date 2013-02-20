@@ -8,9 +8,3 @@
   border-radius: 2px;
   margin-bottom: 10px;
 }
-
-/* Overrides settings above. Make this work better */
-
-.view-online-teaching-guides .views-row {
-  border: none;
-}
