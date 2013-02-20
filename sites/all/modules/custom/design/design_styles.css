@@ -1,3 +1,16 @@
 .hidden-form-element {
   display: none;
 }
+
+.view-design-phase-tasks .views-row {
+  padding: 5px;
+  border: 1px solid rgb(202, 202, 202);
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+/* Overrides settings above. Make this work better */
+
+.view-online-teaching-guides .views-row {
+  border: none;
+}
