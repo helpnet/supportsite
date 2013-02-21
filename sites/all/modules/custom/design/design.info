@@ -26,4 +26,3 @@ features[field][] = node-design_phase_task-field_related_teaching_online_vi
 features[node][] = design_phase_component
 features[node][] = design_phase_task
 stylesheets[all][] = design_styles.css
-scripts[] = design_tasks.js
