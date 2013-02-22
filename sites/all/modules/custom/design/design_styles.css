@@ -8,3 +8,14 @@
   border-radius: 2px;
   margin-bottom: 10px;
 }
+
+.design-phase-page .pane-main-menu ul li {
+    display: inline;
+    margin-right: 5px;
+}
+
+.design-phase-page .pane-main-menu ul li.active-trail {
+    background: rgb(224, 224, 224);
+    padding: 4px;
+    border-radius: 3px;
+}

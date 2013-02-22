@@ -169,7 +169,7 @@ function design_phases_default_page_manager_handlers() {
       'depth' => '1',
       'expanded' => 0,
       'sort' => 0,
-      'override_title' => 0,
+      'override_title' => 1,
       'override_title_text' => '',
     );
     $pane->cache = array();
