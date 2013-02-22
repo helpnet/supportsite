@@ -12,7 +12,7 @@ function help_docs_node_info() {
     'help_doc' => array(
       'name' => t('Technical Job Aid'),
       'base' => 'node_content',
-      'description' => t('Technical Job Aid'),
+      'description' => t('Technical, step-by-step help document'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',

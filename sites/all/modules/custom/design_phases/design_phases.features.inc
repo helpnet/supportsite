@@ -29,7 +29,7 @@ function design_phases_node_info() {
     'design_phase_description' => array(
       'name' => t('Design Phase'),
       'base' => 'node_content',
-      'description' => t('These are the detail pages for each design phase'),
+      'description' => t('Main pages for each design page, i.e. "Design"'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
