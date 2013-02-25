@@ -5,13 +5,16 @@
 
       $('.pane-design-phase-tasks .pane-title').after("<a href='#'class='expand-all'>Expand All</a>");
 
-      $('a.expand-all').click(function() {
+      $('a.expand-all').toggle( function() {
 
-        $('.field-name-field-design-phase-task-overview').slideToggle('fast');
-        $('.field-name-field-related-job-aids-view').slideToggle('fast');
-        $('.field-name-field-related-teaching-online-vi').slideToggle('fast');
+        $('.field-name-field-design-phase-task-overview').slideDown('fast');
+        $('.field-name-field-related-job-aids-view').slideDown('fast');
+        $('.field-name-field-related-teaching-online-vi').slideDown('fast');
 
-        return false;
+      }, function() {
+        $('.field-name-field-design-phase-task-overview').slideUp('fast');
+        $('.field-name-field-related-job-aids-view').slideUp('fast');
+        $('.field-name-field-related-teaching-online-vi').slideUp('fast');
       });
 
       $('.field-name-field-design-phase-task-overview').hide();
