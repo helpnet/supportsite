@@ -29,3 +29,4 @@ features[views_view][] = design_phase_related_nodes
 features[views_view][] = design_phase_tasks
 features[views_view][] = design_phases
 scripts[] = phases.js
+scripts[] = model_graphic.js

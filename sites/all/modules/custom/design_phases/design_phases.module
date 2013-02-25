@@ -5,3 +5,8 @@
  */
 
 include_once 'design_phases.features.inc';
+
+function design_phases_init() {
+  drupal_add_library('raphael', 'raphael', TRUE);
+}
+
