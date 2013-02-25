@@ -33,9 +33,9 @@
 
         $(this).parents('.design-phase-task-row').find('.field-name-field-design-phase-task-overview').slideToggle('fast');
 
-        $(this).parents('.design-phase-task-row').find('.field-name-field-related-job-aids-view').toggle('fast');
+        $(this).parents('.design-phase-task-row').find('.field-name-field-related-job-aids-view').slideToggle('fast');
 
-        $(this).parents('.design-phase-task-row').find('.field-name-field-related-teaching-online-vi').toggle('fast');
+        $(this).parents('.design-phase-task-row').find('.field-name-field-related-teaching-online-vi').slideToggle('fast');
 
         return false;
       });
