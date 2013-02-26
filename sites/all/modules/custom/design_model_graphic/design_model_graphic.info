@@ -1,0 +1,6 @@
+name = design_model_graphic
+core = 7.x
+package = Features
+php = 5.2.4
+dependencies[] = raphael
+scripts[] = model_graphic.js

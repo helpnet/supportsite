@@ -1,5 +1,5 @@
 (function($) {
-  Drupal.behaviors.designPhaseGraphic = { 
+  Drupal.behaviors.designModelGraphic = { 
     attach: function(context, settings) {
 
       var planLink = $('.menu li').children()[0];

@@ -1,0 +1,10 @@
+<?php
+/**
+ * @file
+ * Code for the design_model_graphics module
+ */
+
+function design_phases_init() {
+  drupal_add_library('raphael', 'raphael', TRUE);
+}
+
