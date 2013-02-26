@@ -17,7 +17,7 @@
       modelLabel.attr("font", "20px 'Lucida Grande'");
 
       // Get the menu links.
-      var planLink = $('.menu li').children()[0];
+      var planLinks = $('.menu li').children();
 
       // Function to add the bubbles.
       function createPhaseBubble(link, xval, yval) {
@@ -46,7 +46,11 @@
       }
 
       // Create a bubble for each phase.
-      createPhaseBubble(planLink, paper.width * .50, paper.height * .15, 40);
+      var ys = [paper.height * .15, paper.height * .35, paper.height * .55, paper.height * .75, paper.height * .95]
+
+      for (i=0; i < planLinks.length; i++) {
+        createPhaseBubble(planLinks[i], paper.width * .50, ys[i], 40);
+      }
 
     }
   }
