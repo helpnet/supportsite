@@ -2,6 +2,8 @@
   Drupal.behaviors.designModelGraphic = { 
     attach: function(context, settings) {
 
+      $('ul.menu').hide();
+
       // Create the paper canvas from a DOM element.
       var paperDiv = $('.pane-main-menu .pane-content')[0];
 
@@ -16,9 +18,6 @@
       modelLabel = paper.text(model.attrs.cx, model.attrs.cy, "Design\nModel");
       modelLabel.attr("font", "20px 'Lucida Grande'");
 
-      // Get the menu links.
-      var planLinks = $('.menu li').children();
-
       // Function to add the bubbles.
       function createPhaseBubble(link, xval, yval) {
 
@@ -31,6 +30,9 @@
         label.attr("font", "20px", "Lucida Grande");
         label.attr('href', '#');
 
+        circleHover(phase, xval, yval);
+        circleHover(label, xval, yval);
+
         $(label.node).click(function() {
           link.click();
           return false;
@@ -41,15 +43,80 @@
           return false; 
         });
 
-        line = paper.path('M' + model.attrs.cx + ' ' +  model.attrs.cy + 'L' + phase.attrs.cx + ' ' + phase.attrs.cy)
-        line.toBack();
+      }
+      
+      // Reusable code to draw underlying circle with hover.
+      function circleHover(element, xval, yval) {
+        element.hover(function() {
+          shadow = paper.circle(xval, yval, 39);
+          shadow.toBack();
+          g = shadow.glow();
+          g.toBack();
+        }, function() {
+          g.remove();
+        });
       }
 
-      // Create a bubble for each phase.
-      var ys = [paper.height * .15, paper.height * .35, paper.height * .55, paper.height * .75, paper.height * .95]
+      // Get coordinates for each phase.
+      x = model.attrs.cx;
+      y = model.attrs.cy;
+      r = 110;
+      n = 5;
+      var coordinates = [];
 
-      for (i=0; i < planLinks.length; i++) {
-        createPhaseBubble(planLinks[i], paper.width * .50, ys[i], 40);
+      for(i = 1; i <= 5; i++) {
+        x1 = r * Math.cos((i * 2 * Math.PI)/n) + x;
+        y1 = r * Math.sin((i * 2 * Math.PI)/n) + y;
+
+        var c = {};
+        c.x = x1;
+        c.y = y1;
+
+        coordinates.push(c);
+
+      }
+
+      console.log(coordinates);
+
+      // Get the menu links.
+      var phaseLinks = $('.menu li').children();
+
+      // Create an object for each phase.
+      var plan = {
+        link: phaseLinks[0],
+        xpos: coordinates[0].x,
+        ypos: coordinates[0].y,
+      }
+
+      var design = {
+        link: phaseLinks[1],
+        xpos: coordinates[1].x,
+        ypos: coordinates[1].y,
+      }
+
+      var create = {
+        link: phaseLinks[2],
+        xpos: coordinates[2].x,
+        ypos: coordinates[2].y,
+      }
+
+      var teach = {
+        link: phaseLinks[3],
+        xpos: coordinates[3].x,
+        ypos: coordinates[3].y,
+      }
+
+      var evaluate = {
+        link: phaseLinks[4],
+        xpos: coordinates[4].x,
+        ypos: coordinates[4].y,
+      }
+
+      var phaseObjects = [plan, design, create, teach, evaluate];
+
+      // Create a bubble for each phase.
+      for (i=0; i < phaseLinks.length; i++) {
+        createPhaseBubble(phaseLinks[i], phaseObjects[i].xpos, phaseObjects[i].ypos, 40);
       }
 
     }
