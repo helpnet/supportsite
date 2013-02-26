@@ -1,0 +1,3 @@
+[submodule "sites/all/modules/raphael"]
+	path = sites/all/modules/raphael
+	url = http://git.drupal.org/project/raphael.git
