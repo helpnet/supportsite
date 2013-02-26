@@ -4,7 +4,17 @@
  * Code for the design_model_graphics module
  */
 
+/**
+ * Implements hook_init().
+ *
+ * Adds raphael library and custom JS file.
+ */
+
 function design_phases_init() {
   drupal_add_library('raphael', 'raphael', TRUE);
+
+  if ($_GET['q'] == 'instructional-design-process') {
+    drupal_add_js(drupal_get_path('module', 'design_model_graphic') . '/model_graphic.js');
+  }
 }
 
