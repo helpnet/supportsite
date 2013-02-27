@@ -122,8 +122,6 @@
         bubbles.push(bubble);
       }
 
-      console.log(bubbles);
-
       // Draw lines between the bubbles.
       for (i=0; i < bubbles.length; i++) {
         var line;
@@ -140,8 +138,10 @@
         }
 
         line = paper.path("M" + linex1 + "," + liney1 + "L" + linex2 + "," + liney2);
+        console.log(line.attrs.path);
 
         line.toBack();
+        line.attr('stroke', '#D7D7D7');
         line.attr('stroke-width', '5');
       }
 
