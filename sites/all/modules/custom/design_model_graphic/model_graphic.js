@@ -84,32 +84,32 @@
       // Create an object for each phase.
       var plan = {
         link: phaseLinks[0],
-        xpos: coordinates[0].x,
-        ypos: coordinates[0].y,
-      }
-
-      var design = {
-        link: phaseLinks[1],
-        xpos: coordinates[1].x,
-        ypos: coordinates[1].y,
-      }
-
-      var create = {
-        link: phaseLinks[2],
-        xpos: coordinates[2].x,
-        ypos: coordinates[2].y,
-      }
-
-      var teach = {
-        link: phaseLinks[3],
         xpos: coordinates[3].x,
         ypos: coordinates[3].y,
       }
 
-      var evaluate = {
-        link: phaseLinks[4],
+      var design = {
+        link: phaseLinks[1],
         xpos: coordinates[4].x,
         ypos: coordinates[4].y,
+      }
+
+      var create = {
+        link: phaseLinks[2],
+        xpos: coordinates[0].x,
+        ypos: coordinates[0].y,
+      }
+
+      var teach = {
+        link: phaseLinks[3],
+        xpos: coordinates[1].x,
+        ypos: coordinates[1].y,
+      }
+
+      var evaluate = {
+        link: phaseLinks[4],
+        xpos: coordinates[2].x,
+        ypos: coordinates[2].y,
       }
 
       var phaseObjects = [plan, design, create, teach, evaluate];
