@@ -7,10 +7,10 @@
       // Create the paper canvas from a DOM element.
       var paperDiv = $('.pane-main-menu .pane-content')[0];
 
-      paper = Raphael(paperDiv, 600, 300);
+      paper = Raphael(paperDiv, 600, 400);
 
       // Create the middle bubble.
-      var model = paper.circle(paper.width * .30, paper.height * .5, 60);
+      var model = paper.circle(paper.width * .30, paper.height * .4, 60);
 
       model.attr("fill", "rgb(213, 73, 73)");
       model.attr("stroke", "rgb(116, 39, 39)");
@@ -43,6 +43,8 @@
           return false; 
         });
 
+        return phase;
+
       }
       
       // Reusable code to draw underlying circle with hover.
@@ -60,7 +62,7 @@
       // Get coordinates for each phase.
       x = model.attrs.cx;
       y = model.attrs.cy;
-      r = 110;
+      r = 115;
       n = 5;
       var coordinates = [];
 
@@ -75,8 +77,6 @@
         coordinates.push(c);
 
       }
-
-      console.log(coordinates);
 
       // Get the menu links.
       var phaseLinks = $('.menu li').children();
@@ -115,8 +115,34 @@
       var phaseObjects = [plan, design, create, teach, evaluate];
 
       // Create a bubble for each phase.
+      var bubbles = [];
+
       for (i=0; i < phaseLinks.length; i++) {
-        createPhaseBubble(phaseLinks[i], phaseObjects[i].xpos, phaseObjects[i].ypos, 40);
+        bubble = createPhaseBubble(phaseLinks[i], phaseObjects[i].xpos, phaseObjects[i].ypos, 40);
+        bubbles.push(bubble);
+      }
+
+      console.log(bubbles);
+
+      // Draw lines between the bubbles.
+      for (i=0; i < bubbles.length; i++) {
+        var line;
+        var linex1 = bubbles[i].attrs.cx;
+        var liney1 = bubbles[i].attrs.cy;
+
+        if (i < bubbles.length - 1) {
+          var linex2 = bubbles[i + 1].attrs.cx;
+          var liney2 = bubbles[i + 1].attrs.cy;
+        } 
+        else {
+          var linex2 = bubbles[0].attrs.cx;
+          var liney2 = bubbles[0].attrs.cy;
+        }
+
+        line = paper.path("M" + linex1 + "," + liney1 + "L" + linex2 + "," + liney2);
+
+        line.toBack();
+        line.attr('stroke-width', '5');
       }
 
     }
