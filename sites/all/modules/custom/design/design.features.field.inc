@@ -261,7 +261,7 @@ function design_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '2',
+          'weight' => '11',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -398,7 +398,7 @@ function design_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '4',
+          'weight' => '13',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -468,7 +468,7 @@ function design_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '3',
+          'weight' => '12',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -526,7 +526,7 @@ function design_field_default_fields() {
           'module' => 'viewfield',
           'settings' => array(),
           'type' => 'viewfield_default',
-          'weight' => '5',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -611,7 +611,7 @@ function design_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '6',
+          'weight' => '14',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -669,7 +669,7 @@ function design_field_default_fields() {
           'module' => 'viewfield',
           'settings' => array(),
           'type' => 'viewfield_default',
-          'weight' => '7',
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
