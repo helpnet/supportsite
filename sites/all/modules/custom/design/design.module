@@ -46,7 +46,7 @@ function design_node_presave($node) {
 
     if (isset($node->field_related_teaching_online['und'][0])) {
 
-      foreach ($node->field_related_teaching_online['und'][0] as $key => $term) {
+      foreach ($node->field_related_teaching_online['und'] as $key => $term) {
         if ($key == 0) {
           $online_teaching_docs_output .= $term['tid'];
         } else {
