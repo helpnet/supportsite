@@ -22,9 +22,8 @@
 
 .view-design-phase-tasks .field-name-field-related-job-aids-view, .view-design-phase-tasks .field-name-field-related-teaching-online-vi {
     padding: 7px;
-    background: rgb(224, 224, 224);
-    border: 1px solid rgb(185, 185, 185);
-    border-radius: 2px;
+    background: #f6f6f2;
+    border: 1px solid #f9f9f9;
     width: 80%;
     margin: 0 auto;
 }
