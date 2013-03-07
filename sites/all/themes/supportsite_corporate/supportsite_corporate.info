@@ -3,6 +3,8 @@ description = Support Site working theme with Corporate Clean base theme
 core = 7.x
 base theme = corporateclean
 
+stylesheets[all][] = color/colors.css
+
 regions[navigation] = Navigation
 regions[search_area] = Search area
 regions[highlighted] = Highlighted
