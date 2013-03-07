@@ -314,7 +314,7 @@ function design_phases_default_page_manager_pages() {
     $pane->configuration = array(
       'admin_title' => 'Design Model Overview',
       'title' => 'Design Phases',
-      'body' => '<p>Each design phase has topics that a subject matter expert online instructor should be aware of. Each topic includes tasks that should be completed in that design phase.</p>',
+      'body' => '<p>Each design phase contains topics that relate to designing courses and teaching online. Within these topics are tasks that should be completed in that design phase.</p>',
       'format' => 'full_html',
       'substitute' => TRUE,
     );
