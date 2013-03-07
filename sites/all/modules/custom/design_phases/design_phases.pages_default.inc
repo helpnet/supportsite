@@ -256,8 +256,8 @@ function design_phases_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => '',
-      'title' => '',
-      'body' => '<p>The School of Education Instructional Design model helps us&nbsp;Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur.</p>',
+      'title' => 'Design Phase Model',
+      'body' => '<p>The School of Education Instructional Design model structures the online course desging process. The model helps instructors become familiar with developing an online course and provides expectations for what a subject matter expert should be focusing on at each design phase.</p>',
       'format' => 'full_html',
       'substitute' => TRUE,
     );
@@ -314,7 +314,7 @@ function design_phases_default_page_manager_pages() {
     $pane->configuration = array(
       'admin_title' => 'Design Model Overview',
       'title' => 'Design Phases',
-      'body' => '<p>Each design phase is designed to help&nbsp;Cras justo odio, dapibus ac facilisis in, egestas eget quam. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Sed posuere consectetur est at lobortis.</p>',
+      'body' => '<p>Each design phase has topics that a subject matter expert online instructor should be aware of. Each topic includes tasks that should be completed in that design phase.</p>',
       'format' => 'full_html',
       'substitute' => TRUE,
     );
