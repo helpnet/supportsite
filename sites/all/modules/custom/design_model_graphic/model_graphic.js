@@ -2,8 +2,6 @@
   Drupal.behaviors.designModelGraphic = { 
     attach: function(context, settings) {
 
-      $('ul.menu').hide();
-
       // Create the paper canvas from a DOM element.
       var paperDiv = $('.pane-main-menu .pane-content')[0];
 
@@ -78,8 +76,11 @@
 
       }
 
+      // Hide the menu.
+      $('#model-graphic-base-menu ul.menu').hide();
+
       // Get the menu links.
-      var phaseLinks = $('.menu li').children();
+      var phaseLinks = $('#model-graphic-base-menu .menu li').children();
 
       // Create an object for each phase.
       var plan = {
