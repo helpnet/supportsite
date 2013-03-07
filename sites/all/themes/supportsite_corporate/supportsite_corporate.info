@@ -4,6 +4,7 @@ core = 7.x
 base theme = corporateclean
 
 stylesheets[all][] = color/colors.css
+stylesheets[all][] = overrides.css
 
 regions[navigation] = Navigation
 regions[search_area] = Search area
