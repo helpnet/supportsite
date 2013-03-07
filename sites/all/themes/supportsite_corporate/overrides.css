@@ -14,6 +14,7 @@ h2 {
 
 #header-menu li a {
   text-transform: none !important;
+  color: rgb(230, 230, 230) !important;
 }
 
 #header-menu li a.active {
@@ -21,7 +22,7 @@ h2 {
 }
 
 #header-menu a:hover {
-  text-decoration: underline;
+  text-decoration: underline !important;
   color: rgb(179, 179, 179) !important;
 }
 
