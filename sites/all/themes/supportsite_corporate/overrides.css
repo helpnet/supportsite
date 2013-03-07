@@ -12,6 +12,10 @@ h2 {
   text-shadow: 0 1px rgb(250, 250, 250);
 }
 
+#header-menu li a {
+  text-transform: none !important;
+}
+
 #header-menu li a.active {
   color: #ffc600 !important;
 }
