@@ -16,6 +16,10 @@ h2 {
   padding-top: 10px;
 }
 
+#content {
+  min-height: 700px;
+}
+
 #header-menu li a {
   text-transform: none !important;
   color: rgb(230, 230, 230) !important;
