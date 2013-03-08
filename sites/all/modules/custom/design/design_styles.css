@@ -29,3 +29,8 @@
 .node-design-phase-task .field-name-field-related-teaching-online-vi {
     clear: both;
 }
+
+.field-name-field-design-phase-task-overview .push-left {
+  width: 60%;
+  float:left;
+}

@@ -94,3 +94,13 @@ function design_preprocess_node(&$variables) {
     drupal_add_js(drupal_get_path('module', 'design') . "/design_tasks.js", "file");
   }
 }
+
+function design_node_view_alter(&$build) {
+    if ($build['#bundle'] != 'design_phase_task') {
+      return;
+    }
+
+    $build['field_design_phase_task_overview'][0]['#prefix'] = "<div class='push-left'>";
+    $build['field_design_phase_task_overview'][0]['#suffix'] = "</div>";
+}
+
