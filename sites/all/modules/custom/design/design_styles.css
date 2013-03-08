@@ -20,10 +20,12 @@
     border-radius: 3px;
 }
 
-.view-design-phase-tasks .field-name-field-related-job-aids-view, .view-design-phase-tasks .field-name-field-related-teaching-online-vi {
+.node-design-phase-task .field-name-field-related-job-aids-view, .node-design-phase-task .field-name-field-related-teaching-online-vi {
     padding: 7px;
-    background: #f6f6f2;
-    border: 1px solid #f9f9f9;
-    width: 80%;
-    margin: 0 auto;
+    width: 30%;
+    float: right;
+}
+
+.node-design-phase-task .field-name-field-related-teaching-online-vi {
+    clear: both;
 }
