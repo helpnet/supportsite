@@ -100,7 +100,9 @@ function design_node_view_alter(&$build) {
       return;
     }
 
-    $build['field_design_phase_task_overview'][0]['#prefix'] = "<div class='push-left'>";
-    $build['field_design_phase_task_overview'][0]['#suffix'] = "</div>";
+    if (isset($build['field_related_job_aids_view']) || isset($build['field_related_teaching_online_vi'])) {
+      $build['field_design_phase_task_overview'][0]['#prefix'] = "<div class='push-left'>";
+      $build['field_design_phase_task_overview'][0]['#suffix'] = "</div>";
+    }
 }
 
