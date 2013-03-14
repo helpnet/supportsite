@@ -25,7 +25,7 @@ h2 {
   color: rgb(230, 230, 230) !important;
 }
 
-#header-menu li a.active {
+#header-menu li a.active, #header-menu li a.active-trail {
   color: #ffc600 !important;
 }
 
