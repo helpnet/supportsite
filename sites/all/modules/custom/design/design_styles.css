@@ -24,6 +24,13 @@
     padding: 7px;
     width: 30%;
     float: right;
+    background: #f6f6f2;
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 2px;
+}
+
+.node-design-phase-task .field-name-field-related-teaching-online-vi {
+  margin-top: 5px;
 }
 
 .node-design-phase-task .field-name-field-related-teaching-online-vi {
@@ -37,4 +44,5 @@
 
 .view-field-clear-none div {
   clear: none !important;
+  margin-top: 0px !important;
 }
