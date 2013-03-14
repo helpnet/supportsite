@@ -325,7 +325,7 @@ function design_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '1',
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -526,7 +526,7 @@ function design_field_default_fields() {
           'module' => 'viewfield',
           'settings' => array(),
           'type' => 'viewfield_default',
-          'weight' => '2',
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -669,7 +669,7 @@ function design_field_default_fields() {
           'module' => 'viewfield',
           'settings' => array(),
           'type' => 'viewfield_default',
-          'weight' => '3',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
