@@ -34,3 +34,7 @@
   width: 60%;
   float:left;
 }
+
+.view-field-clear-none div {
+  clear: none !important;
+}
