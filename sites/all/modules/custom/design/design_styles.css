@@ -39,10 +39,29 @@
 
 .field-name-field-design-phase-task-overview .push-left {
   width: 60%;
-  float:left;
 }
 
 .view-field-clear-none div {
   clear: none !important;
   margin-top: 0px !important;
 }
+
+.field-type-viewfield h1,
+.field-type-viewfield h2,
+.field-type-viewfield h3,
+.field-type-viewfield h4 {
+  margin-bottom: 5px;
+}
+
+.field-type-viewfield h4 {
+  margin-top: 10px;
+}
+.field-type-viewfield h2 {
+  margin-top: 5px;
+}
+
+.field-type-viewfield hr {
+  border: 0px;
+  border-top: 1px solid rgb(202, 202, 202);
+}
+
