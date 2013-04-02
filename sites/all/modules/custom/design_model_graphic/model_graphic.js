@@ -1,6 +1,14 @@
 (function($) {
   Drupal.behaviors.designModelGraphic = { 
     attach: function(context, settings) {
+      
+      if ($.browser.msie) {
+        console.log(parseFloat($.browser.version));
+
+        if(parseFloat($.browser.version) < 10) {
+          return;
+        }
+      }
 
       // Create the paper canvas from a DOM element.
       var paperDiv = $('.pane-main-menu .pane-content')[0];
@@ -139,7 +147,6 @@
         }
 
         line = paper.path("M" + linex1 + "," + liney1 + "L" + linex2 + "," + liney2);
-        console.log(line.attrs.path);
 
         line.toBack();
         line.attr('stroke', '#D7D7D7');
