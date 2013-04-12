@@ -4,9 +4,13 @@
 
 .view-design-phase-tasks .design-phase-task-row {
   padding: 5px;
-  border: 1px solid rgb(202, 202, 202);
+  border-bottom: 1px solid rgb(202, 202, 202);
   border-radius: 2px;
   margin-bottom: 10px;
+}
+
+.view-design-phase-tasks .views-row-last {
+  border-bottom: none;
 }
 
 .design-phase-page .pane-main-menu ul li {
