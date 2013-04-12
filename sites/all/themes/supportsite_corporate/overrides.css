@@ -46,3 +46,7 @@ a:hover {
   border-top: none;
   border-bottom: none;
 }
+
+#header-menu ul.menu a {
+  border-bottom: 1px solid rgb(80, 80, 82) !important;
+}
