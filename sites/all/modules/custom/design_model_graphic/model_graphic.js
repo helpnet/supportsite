@@ -33,7 +33,6 @@
         phase.attr('stroke', 'rgb(131, 131, 131)');
 
         icon = paper.image('misc/design.png', xval-16, yval-40, 35, 60);
-        icon.attr('href', '#');
 
         var transparency = paper.circle(xval, yval, 50).toFront();
         transparency.attr('fill', 'rgba(232, 232, 232, 0)');
