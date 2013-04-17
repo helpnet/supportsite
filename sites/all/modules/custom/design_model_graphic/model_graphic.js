@@ -32,16 +32,23 @@
         phase.attr("fill", "#e8e8e8");
         phase.attr('stroke', 'rgb(131, 131, 131)');
 
+        icon = paper.image('misc/design.png', xval-16, yval-40, 35, 60);
+        icon.attr('href', '#');
+
+        var transparency = paper.circle(xval, yval, 50).toFront();
+        transparency.attr('fill', 'rgba(232, 232, 232, 0)');
+        transparency.attr('stroke', 'rgba(232, 232, 232, 0)');
+
         label = paper.text(phase.attrs.cx, phase.attrs.cy+30, link.text);
         label.attr("font", "15px 'Georgia'");
         label.attr('href', '#');
 
-        image = paper.image('misc/design.png', xval-16, yval-40, 35, 60);
-        image.attr('href', '#');
+        iconHover(label, xval-16, yval-40);
 
         circleHover(phase, xval, yval);
         circleHover(label, xval, yval);
-        circleHover(image, xval, yval);
+        circleHover(icon, xval, yval);
+        circleHover(transparency, xval, yval);
 
         $(label.node).click(function() {
           link.click();
@@ -53,7 +60,12 @@
           return false; 
         });
 
-        $(image.node).click(function() {
+        $(icon.node).click(function() {
+          link.click();
+          return false; 
+        });
+
+        $(transparency.node).click(function() {
           link.click();
           return false; 
         });
@@ -73,6 +85,16 @@
           g.remove();
         });
       }
+
+      function iconHover(element, xval, yval) {
+          element.hover(function() {
+              hoverImage = paper.image('misc/design_rollover.png', xval, yval, 35, 60);
+              hoverImage.attr('href', '#');
+          }, function() {
+              hoverImage.remove();
+          });
+      }
+
 
       // Get coordinates for each phase.
       x = model.attrs.cx;
