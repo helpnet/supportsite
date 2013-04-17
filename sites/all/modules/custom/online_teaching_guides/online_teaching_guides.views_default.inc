@@ -88,7 +88,6 @@ function online_teaching_guides_views_default_views() {
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Online Teaching Guides';
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['path'] = 'online-teaching-guides';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Online Teaching Guides';
@@ -98,7 +97,6 @@ function online_teaching_guides_views_default_views() {
 
   /* Display: Related Online Teaching Guides */
   $handler = $view->new_display('block', 'Related Online Teaching Guides', 'block_1');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
