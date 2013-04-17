@@ -16,28 +16,32 @@
       paper = Raphael(paperDiv, 600, 400);
 
       // Create the middle bubble.
-      var model = paper.circle(paper.width * .30, paper.height * .4, 60);
-
+      var model = paper.circle(paper.width * .35, paper.height * .5, 60);
+    
       model.attr("fill", "rgb(213, 73, 73)");
       model.attr("stroke", "rgb(116, 39, 39)");
 
       modelLabel = paper.text(model.attrs.cx, model.attrs.cy, "Design\nModel");
-      modelLabel.attr("font", "20px 'Lucida Grande'");
+      modelLabel.attr("font", "20px 'Georgia'");
 
       // Function to add the bubbles.
       function createPhaseBubble(link, xval, yval) {
 
-        var phase = paper.circle(xval, yval, 40);
+        var phase = paper.circle(xval, yval, 50);
 
-        phase.attr("fill", "rgb(129, 179, 157)");
-        phase.attr('href', '#');
+        phase.attr("fill", "#e8e8e8");
+        phase.attr('stroke', 'rgb(131, 131, 131)');
 
-        label = paper.text(phase.attrs.cx, phase.attrs.cy, link.text);
-        label.attr("font", "20px", "Lucida Grande");
+        label = paper.text(phase.attrs.cx, phase.attrs.cy+30, link.text);
+        label.attr("font", "15px 'Georgia'");
         label.attr('href', '#');
+
+        image = paper.image('misc/design.png', xval-16, yval-40, 35, 60);
+        image.attr('href', '#');
 
         circleHover(phase, xval, yval);
         circleHover(label, xval, yval);
+        circleHover(image, xval, yval);
 
         $(label.node).click(function() {
           link.click();
@@ -49,6 +53,11 @@
           return false; 
         });
 
+        $(image.node).click(function() {
+          link.click();
+          return false; 
+        });
+
         return phase;
 
       }
@@ -56,9 +65,9 @@
       // Reusable code to draw underlying circle with hover.
       function circleHover(element, xval, yval) {
         element.hover(function() {
-          shadow = paper.circle(xval, yval, 39);
+          shadow = paper.circle(xval, yval, 40);
           shadow.toBack();
-          g = shadow.glow();
+          g = shadow.glow({color: "rgb(131, 131, 131)", width: 40});
           g.toBack();
         }, function() {
           g.remove();
@@ -68,7 +77,7 @@
       // Get coordinates for each phase.
       x = model.attrs.cx;
       y = model.attrs.cy;
-      r = 115;
+      r = 140;
       n = 5;
       var coordinates = [];
 
@@ -101,6 +110,7 @@
         link: phaseLinks[1],
         xpos: coordinates[4].x,
         ypos: coordinates[4].y,
+        image: 'misc/design.png'
       }
 
       var create = {
