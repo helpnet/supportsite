@@ -12,6 +12,14 @@ h2 {
   text-shadow: 0 1px rgb(250, 250, 250);
 }
 
+#header {
+    height: 100px;
+}
+
+#header-inside {
+    padding: 10px;
+}
+
 #content-inside {
   padding-top: 10px;
 }
