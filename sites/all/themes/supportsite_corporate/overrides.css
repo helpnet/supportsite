@@ -15,8 +15,9 @@ h2 {
 #header {
     height: 200px;
     background-image: url('../../../../misc/greenbanner.png');
-    background-size: 100%;
+    background-size: 120%;
     background-repeat: no-repeat;
+    background-position: 50% 40%;
 }
 
 #header-inside {
