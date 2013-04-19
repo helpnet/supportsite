@@ -74,11 +74,11 @@
 }
 
 .design-phase-page .panel-col-first {
-    width: 10% !important;
+    width: 30% !important;
 }
 
 .design-phase-page .panel-col-last {
-    width: 40% !important;
+    width: 60% !important;
 }
 .field-name-field-phase-icon img {
     background: none !important;
