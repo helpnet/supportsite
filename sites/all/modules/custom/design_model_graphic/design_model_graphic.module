@@ -13,6 +13,10 @@
 
 function design_model_graphic_init() {
 
+  if ($_GET['q'] == 'supportsite/node/add/help-doc') {
+    return;
+  }
+
   drupal_add_library('raphael', 'raphael', TRUE);
 
   if ($_GET['q'] == 'plan' || 'instructional-design-process') {
@@ -25,3 +29,4 @@ function design_model_graphic_init() {
 
 }
 
+drupal_add_js(array('path' => $_GET['q']), 'setting');

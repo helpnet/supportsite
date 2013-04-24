@@ -1,6 +1,14 @@
 (function($) {
   Drupal.behaviors.designModelGraphic = { 
     attach: function(context, settings) {
+    
+    // TODO: Hack-around for leaky JS. Make this work better!
+    var validPaths = ['design/plan', 'design/design', 'design/create', 'design/teach', 'design/evaluate']
+
+    if ($.inArray(Drupal.settings.path, validPaths) == -1) {
+      return;
+    }
+
       
       if ($.browser.msie) {
         console.log(parseFloat($.browser.version));
