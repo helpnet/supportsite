@@ -235,7 +235,6 @@ function tech_job_aids_categories_views_default_views() {
   $handler->display->display_options['fields']['name']['relationship'] = 'term_node_tid';
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['name']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['text'] = '<h3>[name]</h3>
 <i><a href="irt-help-docs/[tid]">More Blackboard Resources</a></i>
 <br />
