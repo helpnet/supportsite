@@ -19,7 +19,7 @@
       var model = paper.circle(paper.width * .35, paper.height * .5, 60);
     
      // model.attr("fill", "rgb(213, 73, 73)");
-      model.attr("stroke", "rgb(116, 39, 39)");
+      model.attr("stroke", "rgb(216, 215, 215)");
 
       modelLabel = paper.text(model.attrs.cx, model.attrs.cy, "Design\nModel");
       modelLabel.attr("font", "20px 'Georgia'");
@@ -30,7 +30,7 @@
         var phase = paper.circle(xval, yval, 50);
 
         phase.attr("fill", "#e8e8e8");
-        phase.attr('stroke', 'rgb(131, 131, 131)');
+        phase.attr('stroke', 'rgb(216, 215, 215)');
 
         icon = paper.image(image, xval-ix, yval-iy, w, h);
 
@@ -78,7 +78,7 @@
         element.hover(function() {
           shadow = paper.circle(xval, yval, 40);
           shadow.toBack();
-          g = shadow.glow({color: "rgb(131, 131, 131)", width: 40});
+          g = shadow.glow({color: "rgb(131, 131, 131)", width: 30});
           g.toBack();
         }, function() {
           g.remove();
