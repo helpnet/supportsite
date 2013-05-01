@@ -18,21 +18,21 @@
       // Create the middle bubble.
       var model = paper.circle(paper.width * .35, paper.height * .5, 60);
     
-      model.attr("fill", "rgb(213, 73, 73)");
+     // model.attr("fill", "rgb(213, 73, 73)");
       model.attr("stroke", "rgb(116, 39, 39)");
 
       modelLabel = paper.text(model.attrs.cx, model.attrs.cy, "Design\nModel");
       modelLabel.attr("font", "20px 'Georgia'");
 
       // Function to add the bubbles.
-      function createPhaseBubble(link, xval, yval) {
+      function createPhaseBubble(link, xval, yval, image, rolloverImage, w, h, ix, iy) {
 
         var phase = paper.circle(xval, yval, 50);
 
         phase.attr("fill", "#e8e8e8");
         phase.attr('stroke', 'rgb(131, 131, 131)');
 
-        icon = paper.image('misc/design.png', xval-16, yval-40, 35, 60);
+        icon = paper.image(image, xval-ix, yval-iy, w, h);
 
         var transparency = paper.circle(xval, yval, 50).toFront();
         transparency.attr('fill', 'rgba(232, 232, 232, 0)');
@@ -42,7 +42,7 @@
         label.attr("font", "15px 'Georgia'");
         label.attr('href', '#');
 
-        iconHover(label, xval-16, yval-40);
+        iconHover(label, xval-ix, yval-iy, rolloverImage, w, h);
 
         circleHover(phase, xval, yval);
         circleHover(label, xval, yval);
@@ -85,9 +85,9 @@
         });
       }
 
-      function iconHover(element, xval, yval) {
+      function iconHover(element, xval, yval, rolloverImage, w, h) {
           element.hover(function() {
-              hoverImage = paper.image('misc/design_rollover.png', xval, yval, 35, 60);
+              hoverImage = paper.image(rolloverImage, xval, yval, w, h);
               hoverImage.attr('href', '#');
           }, function() {
               hoverImage.remove();
@@ -125,31 +125,60 @@
         link: phaseLinks[0],
         xpos: coordinates[3].x,
         ypos: coordinates[3].y,
+        image: 'misc/model/plan.png',
+        rolloverImage: 'misc/model/plan_rollover.png',
+        w: 45,
+        h: 49,
+        ix: 22,
+        iy: 35,
       }
 
       var design = {
         link: phaseLinks[1],
         xpos: coordinates[4].x,
         ypos: coordinates[4].y,
-        image: 'misc/design.png'
+        image: 'misc/model/design.png',
+        rolloverImage: 'misc/model/design_rollover.png',
+        w: 35,
+        h: 65,
+        ix: 17,
+        iy: 45,
       }
 
       var create = {
         link: phaseLinks[2],
         xpos: coordinates[0].x,
         ypos: coordinates[0].y,
+        image: 'misc/model/create.png',
+        rolloverImage: 'misc/model/create_rollover.png',
+        w: 45,
+        h: 39,
+        ix: 21,
+        iy: 26,
       }
 
       var teach = {
         link: phaseLinks[3],
         xpos: coordinates[1].x,
         ypos: coordinates[1].y,
+        image: 'misc/model/teach.png',
+        rolloverImage: 'misc/model/teach_rollover.png',
+        w: 45,
+        h: 39,
+        ix: 21,
+        iy: 26,
       }
 
       var evaluate = {
         link: phaseLinks[4],
         xpos: coordinates[2].x,
         ypos: coordinates[2].y,
+        image: 'misc/model/evaluate.png',
+        rolloverImage: 'misc/model/evaluate_rollover.png',
+        w: 45,
+        h: 42,
+        ix: 22,
+        iy: 30,
       }
 
       var phaseObjects = [plan, design, create, teach, evaluate];
@@ -158,7 +187,7 @@
       var bubbles = [];
 
       for (i=0; i < phaseLinks.length; i++) {
-        bubble = createPhaseBubble(phaseLinks[i], phaseObjects[i].xpos, phaseObjects[i].ypos, 40);
+        bubble = createPhaseBubble(phaseLinks[i], phaseObjects[i].xpos, phaseObjects[i].ypos, phaseObjects[i].image, phaseObjects[i].rolloverImage, phaseObjects[i].w, phaseObjects[i].h, phaseObjects[i].ix, phaseObjects[i].iy);
         bubbles.push(bubble);
       }
 
