@@ -121,7 +121,7 @@ function help_docs_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '3',
+          'weight' => '4',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -142,7 +142,7 @@ function help_docs_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '3',
+        'weight' => '4',
       ),
     ),
   );
@@ -191,7 +191,7 @@ function help_docs_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '4',
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -212,7 +212,7 @@ function help_docs_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '4',
+        'weight' => '5',
       ),
     ),
   );
@@ -256,7 +256,7 @@ function help_docs_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '2',
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -304,7 +304,7 @@ function help_docs_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '31',
+        'weight' => '7',
       ),
     ),
   );
@@ -359,7 +359,7 @@ function help_docs_field_default_fields() {
             'textformatter_type' => 'ol',
           ),
           'type' => 'textformatter_list',
-          'weight' => '1',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -383,6 +383,90 @@ function help_docs_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
+        'weight' => '3',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-help_doc-field_video_presentation'.
+  $fields['node-help_doc-field_video_presentation'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_video_presentation',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'link',
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'rel' => '',
+          'target' => 'default',
+        ),
+        'display' => array(
+          'url_cutoff' => 80,
+        ),
+        'enable_tokens' => 1,
+        'title' => 'optional',
+        'title_maxlength' => 128,
+        'title_value' => '',
+        'url' => 0,
+      ),
+      'translatable' => '0',
+      'type' => 'link_field',
+    ),
+    'field_instance' => array(
+      'bundle' => 'help_doc',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Enter URL of the video presentation for this help doc topic',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'link',
+          'settings' => array(),
+          'type' => 'link_default',
+          'weight' => '1',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_video_presentation',
+      'label' => 'Video Presentation',
+      'required' => 0,
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'configurable_title' => 0,
+          'rel' => '',
+          'target' => '_blank',
+          'title' => '',
+        ),
+        'display' => array(
+          'url_cutoff' => '80',
+        ),
+        'enable_tokens' => 1,
+        'rel_remove' => 'default',
+        'title' => 'value',
+        'title_maxlength' => '128',
+        'title_value' => 'Watch presentation',
+        'url' => 0,
+        'user_register_form' => FALSE,
+        'validate_url' => 1,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_field',
         'weight' => '2',
       ),
     ),
@@ -392,12 +476,14 @@ function help_docs_field_default_fields() {
   // Included for use with string extractors like potx.
   t('Describe what this job aid helps with.');
   t('Description');
+  t('Enter URL of the video presentation for this help doc topic');
   t('Job Aid Tag');
   t('Related to Teaching Online');
   t('Steps');
   t('Tag this document with related pedagogical areas');
   t('Tag this document with related technical areas');
   t('Type the step content into the text box. Use "Full HTML" to enable the text editor.');
+  t('Video Presentation');
   t('screenshot');
 
   return $fields;
