@@ -22,7 +22,7 @@ function tech_job_aids_categories_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Technical Job Aids Categories';
+  $handler->display->display_options['title'] = 'Blackboard Collaborate';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -95,6 +95,14 @@ function tech_job_aids_categories_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'help_doc' => 'help_doc',
   );
+  /* Filter criterion: Content: Has taxonomy term */
+  $handler->display->display_options['filters']['tid']['id'] = 'tid';
+  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['filters']['tid']['field'] = 'tid';
+  $handler->display->display_options['filters']['tid']['value'] = array(
+    0 => '100',
+  );
+  $handler->display->display_options['filters']['tid']['vocabulary'] = 'technical_job_aids';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
@@ -196,10 +204,10 @@ function tech_job_aids_categories_views_default_views() {
   $handler->display->display_options['filters']['term_node_tid_depth_1']['vocabulary'] = 'technical_job_aids';
   $handler->display->display_options['filters']['term_node_tid_depth_1']['depth'] = '1';
 
-  /* Display: Blackboard */
-  $handler = $view->new_display('block', 'Blackboard', 'block_3');
+  /* Display: Blackboard Learn */
+  $handler = $view->new_display('block', 'Blackboard Learn', 'block_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Blackboard';
+  $handler->display->display_options['title'] = 'Blackboard Learn';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['grouping'] = array(
@@ -294,6 +302,9 @@ function tech_job_aids_categories_views_default_views() {
     0 => '38',
   );
   $handler->display->display_options['filters']['tid']['vocabulary'] = 'technical_job_aids';
+
+  /* Display: Blackboard Collaborate */
+  $handler = $view->new_display('block', 'Blackboard Collaborate', 'block_5');
   $export['technical_job_aids_categories'] = $view;
 
   return $export;
