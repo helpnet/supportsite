@@ -13,11 +13,10 @@ h2 {
 }
 
 #header {
-    height: 200px;
-    background-image: url('../../../../misc/greenbanner.png');
+    height: 100px;
     background-size: 120%;
     background-repeat: no-repeat;
-    background-position: 50% 40%;
+    background-position: 50% 60%;
 }
 
 #header-inside {
